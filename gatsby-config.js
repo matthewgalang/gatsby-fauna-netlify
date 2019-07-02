@@ -1,4 +1,16 @@
+const proxy = require('http-proxy-middleware')
+
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      proxy('/.netlify/functions/', {
+        target: 'http://localhost:9000/',
+        pathRewrite: {
+          '^/\\.netlify/functions': ''
+        }
+      })
+    )
+  },
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
