@@ -55,35 +55,41 @@ export default class Counts extends Component {
     renderVisits() {
         return(
         <div key="visits">
+            {typeof window !== 'undefined' &&
             <span>Visited stackoverflow <Odometer 
                 format="d" 
                 duration={10000} 
                 value={ this.state["stackoverflow.com"] ? this.state["stackoverflow.com"] : this.state.odometerValue }/> times.
             </span>
+            }
         </div>
         )
     }
     renderCups() {
         return(
         <div key="cups">
+            {typeof window !== 'undefined' &&
             <span>
                 <Odometer 
                 format="d" 
                 duration={10000} 
                 value={ this.state.coffeeCupsCount ? this.state.coffeeCupsCount : this.state.odometerValue }/> cups of coffee brewed at M4S.
             </span>
+            }
         </div>
         )
     }
     renderLines() {
         return(
         <div key="lines">
+            {typeof window !== 'undefined' &&
             <span>
                 <Odometer 
                 format="d" 
                 duration={10000} 
                 value={ this.state.codeLinesCount ? this.state.codeLinesCount : this.state.odometerValue }/> lines of code.
             </span>
+            }
         </div>
         )
     }
