@@ -6,7 +6,7 @@
   "author": "Matthew Galang <magalang1@gmail.com>",
   "dependencies": {
     "faunadb": "^2.6.1",
-    "gatsby": "^2.12.0",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.3",
     "gatsby-plugin-manifest": "^2.2.0",
     "gatsby-plugin-offline": "^2.2.0",
